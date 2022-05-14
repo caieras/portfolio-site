@@ -47,7 +47,7 @@ puts "5 skills posts created"
   )
 end
 
-puts "5 portfolios posts created"
+puts "5 portfolios Rails posts created"
 
 1.times do |portfolio_item|
   Portfolio.create!(
@@ -64,3 +64,13 @@ puts "5 portfolios posts created"
     thumb_image: "https://via.placeholder.com/350x150"
   )
 end
+
+puts "1 portfolio Angular posts created"
+
+3.times do |technology|
+  Portfolio.last.technologies.create!(
+    name: "Technology #{technology}",
+  )
+end
+
+puts "3 technologies created"
