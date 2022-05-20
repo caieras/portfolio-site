@@ -1,5 +1,5 @@
 class Portfolio < ApplicationRecord
-  has_many :technologies, inverse_of: :portfolio
+  has_many :technologies, inverse_of: :portfolio, dependent: :destroy
   accepts_nested_attributes_for :technologies, reject_if: lambda { |attrs| attrs['name'].blank? }
 
   include Placeholder
